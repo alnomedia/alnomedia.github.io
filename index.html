@@ -93,9 +93,9 @@ nav .links a:hover{opacity:1}
 #pillars .stage{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center}
 #pillarsVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.45) saturate(1.05)}
 #pillars .tint{position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,11,9,.88) 0%,rgba(10,11,9,.45) 55%,rgba(10,11,9,.75) 100%)}
-#pillars .inner{position:relative;z-index:5;width:100%;padding:0 6vw}
-#pillars .kicker{font-family:var(--condensed);font-weight:300;letter-spacing:.45em;text-transform:uppercase;font-size:.8rem;color:var(--emerald);margin-bottom:2.2rem}
-.pillar{position:absolute;left:6vw;right:6vw;top:50%;opacity:0;pointer-events:none;
+#pillars .inner{position:absolute;inset:0;z-index:5;padding:0 6vw}
+#pillars .kicker{position:absolute;top:12vh;left:6vw;margin:0;font-family:var(--condensed);font-weight:300;letter-spacing:.45em;text-transform:uppercase;font-size:.8rem;color:var(--emerald);z-index:6}
+.pillar{position:absolute;left:6vw;right:6vw;top:54%;transform:translateY(-50%);opacity:0;pointer-events:none;
   display:flex;align-items:center;justify-content:space-between;gap:2.5rem}
 .pillar .no{font-family:var(--condensed);font-weight:300;font-size:.9rem;letter-spacing:.35em;color:var(--emerald)}
 .pillar h3{font-family:var(--display);font-size:clamp(2rem,5.2vw,4.8rem);line-height:.98;text-transform:uppercase;margin:.8rem 0 1.1rem;color:var(--cream)}
