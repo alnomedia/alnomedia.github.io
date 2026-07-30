@@ -180,7 +180,24 @@ nav .links a:hover{opacity:1}
 .btn{font-family:var(--condensed);font-weight:500;letter-spacing:.25em;text-transform:uppercase;font-size:.85rem;padding:1.15rem 2.6rem;border:1px solid var(--emerald);position:relative;overflow:hidden;transition:color .4s;display:inline-flex;align-items:center;gap:.7rem}
 .btn::before{content:"";position:absolute;inset:0;background:var(--emerald);transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.7,.2,1);z-index:0}
 .btn:hover::before{transform:scaleX(1)}
-.btn span{position:relative;z-index:1}
+.btn span{position:relative;z-index:1;display:inline-flex;align-items:center;gap:.6rem}
+.btn .btnIco{width:15px;height:15px;flex:none}
+.btn.sm{padding:.8rem 1.6rem;font-size:.72rem;letter-spacing:.18em}
+
+/* section CTA pairs */
+.ctaRow{display:flex;gap:.9rem;flex-wrap:wrap;align-items:center}
+.ctaLine{font-family:var(--condensed);font-weight:300;font-size:.9rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--cream-dim);margin-bottom:1rem}
+.ctaLine b{font-weight:500;color:var(--cream)}
+#stats .ctaWrap{margin-top:4.5rem;text-align:center}
+#stats .ctaWrap .ctaRow{justify-content:center}
+.heroCta{margin-top:2.2rem;opacity:0;transform:translateY(20px);pointer-events:auto}
+.heroCta .btn{backdrop-filter:blur(3px);background:rgba(10,11,9,.28)}
+.heroCta .btn.solid{background:var(--emerald)}
+.pillar .pCta{margin-top:1.6rem;pointer-events:none}
+.pillar.live .pCta{pointer-events:auto}
+#work .allWorks{gap:.9rem;flex-wrap:wrap}
+@media(max-width:900px){.pillar .pCta .btn{padding:.7rem 1.2rem;font-size:.68rem}}
 .btn:hover{color:var(--ink)}
 .btn.solid{background:var(--emerald);color:var(--ink)}
 .btn.solid::before{background:var(--cream)}
@@ -232,6 +249,12 @@ footer .copy{width:100%;font-size:.72rem;color:rgba(242,236,220,.35);letter-spac
         <span class="ln" data-text="NODELMAN"></span>
       </h1>
       <div class="sub" id="heroSub">Video Editor &amp; AI Video Specialist</div>
+      <div class="heroCta" id="heroCta">
+        <div class="ctaRow">
+          <a class="btn solid sm" href="https://wa.me/972523949964?text=Hi%20Alexander%2C%20I%27d%20like%20to%20talk%20about%20a%20video%20project." target="_blank" rel="noopener"><span>Let&rsquo;s Talk</span></a>
+          <a class="btn sm" href="#work"><span>See My Work</span></a>
+        </div>
+      </div>
       <div class="scrollHint">Scroll</div>
     </div>
     <div class="fadeBottom"></div>
@@ -245,6 +268,13 @@ footer .copy{width:100%;font-size:.72rem;color:rgba(242,236,220,.35);letter-spac
     <div class="stat"><div class="num"><span data-count="500">0</span>K<b>+</b></div><div class="lbl">Views</div></div>
     <div class="stat"><div class="num"><span data-count="40">0</span><b>+</b></div><div class="lbl">Projects</div></div>
     <div class="stat"><div class="num"><span data-count="100">0</span><b>%</b></div><div class="lbl">On-Time</div></div>
+  </div>
+  <div class="ctaWrap">
+    <div class="ctaLine">Numbers are nice. <b>Your project is better.</b></div>
+    <div class="ctaRow">
+      <a class="btn solid" href="https://wa.me/972523949964?text=Hi%20Alexander%2C%20I%27d%20like%20to%20talk%20about%20a%20video%20project." target="_blank" rel="noopener"><span>Message Me On WhatsApp</span></a>
+      <a class="btn" href="#work"><span>See My Work</span></a>
+    </div>
   </div>
 </section>
 
@@ -260,6 +290,13 @@ footer .copy{width:100%;font-size:.72rem;color:rgba(242,236,220,.35);letter-spac
           <div class="no">01 / 03</div>
           <h3>Documentary<br>Editing</h3>
           <p>Long-form storytelling with festival-grade pacing, structure and emotion. Home of an award-winning documentary cut frame by frame.</p>
+          <div class="pCta">
+            <div class="ctaLine">Got a story worth telling?</div>
+            <div class="ctaRow">
+              <a class="btn solid sm" href="https://wa.me/972523949964?text=Hi%20Alexander%2C%20I%20have%20a%20documentary%20project%20in%20mind." target="_blank" rel="noopener"><span>Let&rsquo;s Make Your Documentary</span></a>
+              <a class="btn sm" href="archive.html#documentary"><span>Check My Documentaries</span></a>
+            </div>
+          </div>
         </div>
         <div class="pThumbs">
           <video class="pv" src="assets/pillarvid/p1_1.mp4" poster="assets/pillars/p1_1.jpg" muted loop playsinline preload="none" aria-label="Documentary work" onerror="this.outerHTML='&lt;img src=&quot;assets/pillars/p1_1.jpg&quot; alt=&quot;Documentary work&quot;&gt;'"></video>
@@ -272,6 +309,13 @@ footer .copy{width:100%;font-size:.72rem;color:rgba(242,236,220,.35);letter-spac
           <div class="no">02 / 03</div>
           <h3>Commercial &amp;<br>Social Shorts</h3>
           <p>High-energy edits engineered for retention — ads, reels and shorts that hit rhythm, hook fast and convert.</p>
+          <div class="pCta">
+            <div class="ctaLine">Need content that stops the scroll?</div>
+            <div class="ctaRow">
+              <a class="btn solid sm" href="https://wa.me/972523949964?text=Hi%20Alexander%2C%20I%20need%20a%20commercial%20/%20social%20edit." target="_blank" rel="noopener"><span>Let&rsquo;s Make Your Ad</span></a>
+              <a class="btn sm" href="archive.html#commercial"><span>Check My Commercials</span></a>
+            </div>
+          </div>
         </div>
         <div class="pThumbs">
           <video class="pv" src="assets/pillarvid/p2_1.mp4" poster="assets/pillars/p2_1.jpg" muted loop playsinline preload="none" aria-label="Commercial work" onerror="this.outerHTML='&lt;img src=&quot;assets/pillars/p2_1.jpg&quot; alt=&quot;Commercial work&quot;&gt;'"></video>
@@ -284,6 +328,13 @@ footer .copy{width:100%;font-size:.72rem;color:rgba(242,236,220,.35);letter-spac
           <div class="no">03 / 03</div>
           <h3>Professional<br>AI Video</h3>
           <p>Cinematic AI-generated video for any platform — brand films, product spots and concepts that used to need a full crew.</p>
+          <div class="pCta">
+            <div class="ctaLine">Big vision, no film crew?</div>
+            <div class="ctaRow">
+              <a class="btn solid sm" href="https://wa.me/972523949964?text=Hi%20Alexander%2C%20I%20want%20to%20create%20an%20AI%20video." target="_blank" rel="noopener"><span>Let&rsquo;s Build It With AI</span></a>
+              <a class="btn sm" href="archive.html#ai"><span>Check My AI Videos</span></a>
+            </div>
+          </div>
         </div>
         <div class="pThumbs">
           <video class="pv" src="assets/pillarvid/p3_1.mp4" poster="assets/pillars/p3_1.jpg" muted loop playsinline preload="none" aria-label="AI video work" onerror="this.outerHTML='&lt;img src=&quot;assets/pillars/p3_1.jpg&quot; alt=&quot;AI video work&quot;&gt;'"></video>
@@ -339,7 +390,10 @@ footer .copy{width:100%;font-size:.72rem;color:rgba(242,236,220,.35);letter-spac
         </div>
       </div>
     </div>
-    <div class="allWorks"><a class="btn" href="archive.html"><span>View All Works&nbsp;&nbsp;→</span></a></div>
+    <div class="allWorks">
+      <a class="btn solid" href="https://wa.me/972523949964?text=Hi%20Alexander%2C%20I%27d%20like%20to%20talk%20about%20a%20video%20project." target="_blank" rel="noopener"><span>Start Your Project</span></a>
+      <a class="btn" href="archive.html"><span>View All Works&nbsp;&nbsp;&rarr;</span></a>
+    </div>
   </div>
 </section>
 
@@ -364,6 +418,7 @@ footer .copy{width:100%;font-size:.72rem;color:rgba(242,236,220,.35);letter-spac
   <div class="ctas">
     <a class="btn solid" href="https://wa.me/972523949964" target="_blank" rel="noopener"><span>WhatsApp Me</span></a>
     <a class="btn" href="mailto:Alexno1996@gmail.com"><span>Email Me</span></a>
+    <a class="btn" href="https://www.linkedin.com/in/alexandernodelman" target="_blank" rel="noopener"><span><svg class="btnIco" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.02h4.56V24H.22V8.02zM8.34 8.02h4.37v2.18h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 6.99V24h-4.56v-7.28c0-1.74-.03-3.98-2.42-3.98-2.43 0-2.8 1.9-2.8 3.86V24H8.34V8.02z"/></svg>LinkedIn</span></a>
   </div>
   <div class="marquee"><div class="track" id="mqTrack"></div></div>
   <footer>
@@ -450,9 +505,13 @@ function preloadFrames(){
 }
 function finishLoad(){
   loadBar.style.width='100%'; loadPct.textContent='100%';
-  setTimeout(()=>{ loader.classList.add('done'); heroIntro(); }, 350);
+  setTimeout(()=>{ loader.classList.add('done'); heroIntro(); ScrollTrigger.refresh(); }, 350);
   drawFrame(0);
 }
+/* layout settles as fonts/videos arrive — keep trigger positions honest */
+addEventListener('load',()=>ScrollTrigger.refresh());
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>ScrollTrigger.refresh());
+let _rt; addEventListener('resize',()=>{clearTimeout(_rt);_rt=setTimeout(()=>ScrollTrigger.refresh(),200);});
 
 /* buttery scrub: lerp toward scroll-target frame every tick */
 gsap.ticker.add(()=>{
@@ -471,11 +530,13 @@ document.querySelectorAll('.heroType .ln').forEach(ln=>{
 function heroIntro(){
   gsap.to('.heroType .ch',{y:0,rotate:0,opacity:1,duration:1.1,ease:'power4.out',stagger:0.045,delay:.15});
   gsap.to('#heroSub',{opacity:1,y:0,duration:1,ease:'power3.out',delay:1.05});
+  gsap.to('#heroCta',{opacity:1,y:0,duration:1,ease:'power3.out',delay:1.35});
 }
 /* name tracks out as one block (no missing letters) + kinetic stroke line as you scrub */
 gsap.to('.heroType .name',{yPercent:-55,opacity:0,letterSpacing:'.06em',ease:'power2.in',
   scrollTrigger:{trigger:'#hero',start:'16% top',end:'46% top',scrub:true}});
 gsap.to('#heroSub',{opacity:0,y:-30,scrollTrigger:{trigger:'#hero',start:'12% top',end:'30% top',scrub:true}});
+gsap.to('#heroCta',{opacity:0,y:-30,scrollTrigger:{trigger:'#hero',start:'12% top',end:'30% top',scrub:true}});
 gsap.to('.scrollHint',{opacity:0,scrollTrigger:{trigger:'#hero',start:'5% top',end:'15% top',scrub:true}});
 gsap.fromTo('#kinetic',{opacity:0,xPercent:12},{opacity:1,xPercent:-12,ease:'none',
   scrollTrigger:{trigger:'#hero',start:'45% top',end:'95% top',scrub:true}});
@@ -497,15 +558,30 @@ document.querySelectorAll('[data-count]').forEach(el=>{
 /* ---------- pillars: one at a time over clip 2 ---------- */
 const pillars=gsap.utils.toArray('.pillar'), dots=document.querySelectorAll('#pillars .dots i');
 const pv=document.getElementById('pillarsVideo');
-pillars.forEach((p,i)=>{
-  const seg=1/pillars.length, st=i*seg;
-  gsap.timeline({scrollTrigger:{trigger:'#pillars',start:()=>innerHeight*3*(st+0.01)+' top',
-    end:()=>innerHeight*3*(st+seg-0.01)+' top',scrub:true,
-    onToggle:s=>{if(s.isActive)dots.forEach((d,di)=>d.classList.toggle('on',di===i));}}})
-    .fromTo(p,{opacity:0,yPercent:-42},{opacity:1,yPercent:-50,duration:.35,ease:'power2.out'})
-    .to(p,{opacity:1,duration:.3})
-    .to(p,{opacity:0,yPercent:-58,duration:.35,ease:'power2.in'}, i===pillars.length-1?'+=10':'+=0');
-});
+/* one deterministic scrub across the whole section: each pillar owns an equal band.
+   Immune to layout changes elsewhere on the page. */
+const N=pillars.length;
+function paintPillars(prog){
+  const pos=Math.min(Math.max(prog,0),0.9999)*N;   // 0..N
+  const active=Math.floor(pos);
+  pillars.forEach((p,i)=>{
+    const local=pos-i;                              // <0 upcoming, 0..1 mine, >1 past
+    let op,yp;
+    if(local<0 || local>=1){ op=0; yp = local<0 ? -42 : -58; }
+    else if(local<0.22){ const t=local/0.22; op=t; yp=-42+(-50+42)*t; }
+    else if(local>0.80 && i<N-1){ const t=(local-0.80)/0.20; op=1-t; yp=-50+(-58+50)*t; }
+    else { op=1; yp=-50; }
+    p.style.opacity=op;
+    p.style.transform=`translateY(${yp}%)`;
+    const live=op>0.5;
+    if(live!==p.classList.contains('live')) p.classList.toggle('live',live);
+  });
+  dots.forEach((d,di)=>d.classList.toggle('on',di===active));
+}
+paintPillars(0);
+ScrollTrigger.create({trigger:'#pillars',start:'top top',end:'bottom bottom',scrub:true,
+  onUpdate:s=>paintPillars(s.progress)});
+
 ScrollTrigger.create({trigger:'#pillars',start:'top 80%',end:'bottom top',
   onEnter:()=>pv.play().catch(()=>{}),onEnterBack:()=>pv.play().catch(()=>{}),
   onLeave:()=>pv.pause(),onLeaveBack:()=>pv.pause()});
@@ -561,6 +637,18 @@ function closeLb(){lb.classList.remove('open');lbIf.src='';lenis.start();}
 document.getElementById('lbClose').addEventListener('click',closeLb);
 lb.addEventListener('click',e=>{if(e.target===lb)closeLb();});
 addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
+
+/* ---------- smooth in-page anchors (Lenis) ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href');
+    if(id.length<2) return;
+    const t=document.querySelector(id);
+    if(!t) return;
+    e.preventDefault();
+    lenis.scrollTo(t,{duration:1.4});
+  });
+});
 
 /* ---------- finale ---------- */
 ScrollTrigger.create({trigger:'#finale',start:'top 65%',once:true,
