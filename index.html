@@ -675,7 +675,14 @@ function paintPillars(prog){
     p.style.opacity=op;
     p.style.transform=`translateY(${yp}%)`;
     const live=op>0.5;
-    if(live!==p.classList.contains('live')) p.classList.toggle('live',live);
+    if(live!==p.classList.contains('live')){
+      p.classList.toggle('live',live);
+      /* only the visible pillar's work clips run — saves battery on phones */
+      p.querySelectorAll('video.pv').forEach(v=>{
+        if(live){ if(v.preload!=='auto'){v.preload='auto';v.load();} v.play().catch(()=>{}); }
+        else v.pause();
+      });
+    }
   });
   dots.forEach((d,di)=>d.classList.toggle('on',di===active));
 }
