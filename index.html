@@ -697,22 +697,9 @@ ScrollTrigger.create({trigger:'#pillars',start:'top 80%',end:'bottom top',
   onLeave:()=>pv.pause(),onLeaveBack:()=>pv.pause()});
 pv.addEventListener('error',()=>{ pv.style.display='none'; });
 
-/* pillar thumbnail loops — load + play only while on screen (IntersectionObserver) */
-const pvThumbs=[...document.querySelectorAll('.pThumbs video.pv')];
-if('IntersectionObserver' in window){
-  const io=new IntersectionObserver(entries=>{
-    entries.forEach(en=>{
-      const v=en.target;
-      if(en.isIntersecting){
-        if(v.preload!=='auto'){ v.preload='auto'; v.load(); }
-        v.play().catch(()=>{});
-      } else v.pause();
-    });
-  },{rootMargin:'200px 0px',threshold:0.01});
-  pvThumbs.forEach(v=>io.observe(v));
-}else{
-  pvThumbs.forEach(v=>{v.preload='auto';v.load();v.play().catch(()=>{});});
-}
+/* NOTE: playback of the pillar thumbnail loops is owned solely by paintPillars() above.
+   An IntersectionObserver here previously fought it — play() succeeded, then the
+   observer paused the same element a moment later. One owner only. */
 
 /* ---------- work ---------- */
 const wv=document.getElementById('workVideo');
