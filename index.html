@@ -675,14 +675,15 @@ function paintPillars(prog){
     p.style.opacity=op;
     p.style.transform=`translateY(${yp}%)`;
     const live=op>0.5;
-    if(live!==p.classList.contains('live')){
-      p.classList.toggle('live',live);
-      /* only the visible pillar's work clips run — saves battery on phones */
-      p.querySelectorAll('video.pv').forEach(v=>{
-        if(live){ if(v.preload!=='auto'){v.preload='auto';v.load();} v.play().catch(()=>{}); }
-        else v.pause();
-      });
-    }
+    if(live!==p.classList.contains('live')) p.classList.toggle('live',live);
+    /* only the visible pillar's work clips run — saves battery on phones.
+       Checked every update (not just on change) so a blocked first play retries. */
+    p.querySelectorAll('video.pv').forEach(v=>{
+      if(live){
+        if(v.preload!=='auto'){ v.preload='auto'; v.load(); }
+        if(v.paused) v.play().catch(()=>{});
+      } else if(!v.paused) v.pause();
+    });
   });
   dots.forEach((d,di)=>d.classList.toggle('on',di===active));
 }
