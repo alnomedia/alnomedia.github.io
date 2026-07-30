@@ -78,7 +78,7 @@ nav .links a{opacity:.7;transition:opacity .3s}
 nav .links a:hover{opacity:1}
 
 /* ---------- hero ---------- */
-#hero{position:relative;height:260vh}
+#hero{position:relative;height:135vh}
 #hero .stage{position:sticky;top:0;height:100vh;overflow:hidden}
 #heroCanvas{position:absolute;inset:0;width:100%;height:100%}
 #hero .vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(10,11,9,.75) 100%);pointer-events:none}
@@ -122,10 +122,12 @@ nav .links a:hover{opacity:1}
 .pillar h3{font-family:var(--display);font-size:clamp(2rem,5.2vw,4.8rem);line-height:.98;text-transform:uppercase;margin:.8rem 0 1.1rem;color:var(--cream)}
 .pillar p{max-width:34rem;font-size:clamp(.9rem,1.2vw,1.05rem);line-height:1.65;color:var(--cream-dim)}
 .pThumbs{display:flex;flex-direction:column;gap:.9rem;width:min(17vw,250px);flex:none;margin-right:4vw}
-.pThumbs img{width:100%;aspect-ratio:16/9;max-height:21vh;object-fit:cover;border:1px solid rgba(242,236,220,.2);
+.pThumbs img,.pThumbs video{width:100%;aspect-ratio:16/9;max-height:21vh;object-fit:cover;display:block;
+  border:1px solid rgba(242,236,220,.2);background:var(--ink-2);
   box-shadow:0 18px 50px rgba(0,0,0,.55);filter:saturate(.95) contrast(1.04);transition:transform .5s,border-color .5s}
-.pThumbs img:nth-child(2){transform:translateX(-1rem)}
-.pThumbs img:hover{transform:scale(1.04);border-color:var(--emerald)}
+.pThumbs > *:nth-child(2){transform:translateX(-1rem)}
+.pThumbs img:hover,.pThumbs video:hover{transform:scale(1.04);border-color:var(--emerald)}
+.pThumbs > *:nth-child(2):hover{transform:translateX(-1rem) scale(1.04)}
 @media(max-width:900px){.pThumbs{display:none}}
 #pillars .dots{position:absolute;right:6vw;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:.9rem;z-index:6}
 #pillars .dots i{width:8px;height:8px;border-radius:50%;background:rgba(242,236,220,.25);transition:background .4s,transform .4s}
@@ -188,6 +190,7 @@ footer .fLogo em{font-style:normal;color:var(--emerald)}
 footer .fLinks{display:flex;gap:2.2rem;font-family:var(--condensed);font-weight:300;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase}
 footer .fLinks a{color:var(--cream-dim);transition:color .3s;display:flex;align-items:center;gap:.5rem}
 footer .fLinks a:hover{color:var(--emerald)}
+footer .fLinks .ico{width:15px;height:15px;flex:none}
 footer .copy{width:100%;font-size:.72rem;color:rgba(242,236,220,.35);letter-spacing:.1em}
 
 /* marquee */
@@ -259,9 +262,9 @@ footer .copy{width:100%;font-size:.72rem;color:rgba(242,236,220,.35);letter-spac
           <p>Long-form storytelling with festival-grade pacing, structure and emotion. Home of an award-winning documentary cut frame by frame.</p>
         </div>
         <div class="pThumbs">
-          <img src="assets/pillars/p1_1.jpg" alt="Documentary work" onerror="this.remove()">
-          <img src="assets/pillars/p1_2.jpg" alt="Documentary work" onerror="this.remove()">
-          <img src="assets/pillars/p1_3.jpg" alt="Documentary work" onerror="this.remove()">
+          <video class="pv" src="assets/pillarvid/p1_1.mp4" poster="assets/pillars/p1_1.jpg" muted loop playsinline preload="none" aria-label="Documentary work" onerror="this.outerHTML='&lt;img src=&quot;assets/pillars/p1_1.jpg&quot; alt=&quot;Documentary work&quot;&gt;'"></video>
+          <video class="pv" src="assets/pillarvid/p1_2.mp4" poster="assets/pillars/p1_2.jpg" muted loop playsinline preload="none" aria-label="Documentary work" onerror="this.outerHTML='&lt;img src=&quot;assets/pillars/p1_2.jpg&quot; alt=&quot;Documentary work&quot;&gt;'"></video>
+          <video class="pv" src="assets/pillarvid/p1_3.mp4" poster="assets/pillars/p1_3.jpg" muted loop playsinline preload="none" aria-label="Documentary work" onerror="this.outerHTML='&lt;img src=&quot;assets/pillars/p1_3.jpg&quot; alt=&quot;Documentary work&quot;&gt;'"></video>
         </div>
       </div>
       <div class="pillar" data-p="1">
@@ -271,9 +274,9 @@ footer .copy{width:100%;font-size:.72rem;color:rgba(242,236,220,.35);letter-spac
           <p>High-energy edits engineered for retention — ads, reels and shorts that hit rhythm, hook fast and convert.</p>
         </div>
         <div class="pThumbs">
-          <img src="assets/pillars/p2_1.jpg" alt="Commercial work" onerror="this.remove()">
-          <img src="assets/pillars/p2_2.jpg" alt="Commercial work" onerror="this.remove()">
-          <img src="assets/pillars/p2_3.jpg" alt="Commercial work" onerror="this.remove()">
+          <video class="pv" src="assets/pillarvid/p2_1.mp4" poster="assets/pillars/p2_1.jpg" muted loop playsinline preload="none" aria-label="Commercial work" onerror="this.outerHTML='&lt;img src=&quot;assets/pillars/p2_1.jpg&quot; alt=&quot;Commercial work&quot;&gt;'"></video>
+          <video class="pv" src="assets/pillarvid/p2_2.mp4" poster="assets/pillars/p2_2.jpg" muted loop playsinline preload="none" aria-label="Commercial work" onerror="this.outerHTML='&lt;img src=&quot;assets/pillars/p2_2.jpg&quot; alt=&quot;Commercial work&quot;&gt;'"></video>
+          <video class="pv" src="assets/pillarvid/p2_3.mp4" poster="assets/pillars/p2_3.jpg" muted loop playsinline preload="none" aria-label="Commercial work" onerror="this.outerHTML='&lt;img src=&quot;assets/pillars/p2_3.jpg&quot; alt=&quot;Commercial work&quot;&gt;'"></video>
         </div>
       </div>
       <div class="pillar" data-p="2">
@@ -283,9 +286,9 @@ footer .copy{width:100%;font-size:.72rem;color:rgba(242,236,220,.35);letter-spac
           <p>Cinematic AI-generated video for any platform — brand films, product spots and concepts that used to need a full crew.</p>
         </div>
         <div class="pThumbs">
-          <img src="assets/pillars/p3_1.jpg" alt="AI video work" onerror="this.remove()">
-          <img src="assets/pillars/p3_2.jpg" alt="AI video work" onerror="this.remove()">
-          <img src="assets/pillars/p3_3.jpg" alt="AI video work" onerror="this.remove()">
+          <video class="pv" src="assets/pillarvid/p3_1.mp4" poster="assets/pillars/p3_1.jpg" muted loop playsinline preload="none" aria-label="AI video work" onerror="this.outerHTML='&lt;img src=&quot;assets/pillars/p3_1.jpg&quot; alt=&quot;AI video work&quot;&gt;'"></video>
+          <video class="pv" src="assets/pillarvid/p3_2.mp4" poster="assets/pillars/p3_2.jpg" muted loop playsinline preload="none" aria-label="AI video work" onerror="this.outerHTML='&lt;img src=&quot;assets/pillars/p3_2.jpg&quot; alt=&quot;AI video work&quot;&gt;'"></video>
+          <video class="pv" src="assets/pillarvid/p3_3.mp4" poster="assets/pillars/p3_3.jpg" muted loop playsinline preload="none" aria-label="AI video work" onerror="this.outerHTML='&lt;img src=&quot;assets/pillars/p3_3.jpg&quot; alt=&quot;AI video work&quot;&gt;'"></video>
         </div>
       </div>
       <div class="dots"><i class="on"></i><i></i><i></i></div>
@@ -368,6 +371,10 @@ footer .copy{width:100%;font-size:.72rem;color:rgba(242,236,220,.35);letter-spac
     <div class="fLinks">
       <a href="https://wa.me/972523949964" target="_blank" rel="noopener">WhatsApp — (+972) 52-3949964</a>
       <a href="mailto:Alexno1996@gmail.com">Alexno1996@gmail.com</a>
+      <a href="https://www.linkedin.com/in/alexandernodelman" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+        <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.22 8.02h4.56V24H.22V8.02zM8.34 8.02h4.37v2.18h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 6.99V24h-4.56v-7.28c0-1.74-.03-3.98-2.42-3.98-2.43 0-2.8 1.9-2.8 3.86V24H8.34V8.02z"/></svg>
+        LinkedIn
+      </a>
     </div>
     <div class="copy">© 2026 AlnoMedia — Alexander Nodelman. All rights reserved.</div>
   </footer>
@@ -449,7 +456,7 @@ function finishLoad(){
 
 /* buttery scrub: lerp toward scroll-target frame every tick */
 gsap.ticker.add(()=>{
-  curFrame += (targetFrame-curFrame)*0.14;
+  curFrame += (targetFrame-curFrame)*0.22;
   if(Math.abs(targetFrame-curFrame)>0.01) drawFrame(Math.max(0,Math.min(FRAME_COUNT-1,Math.round(curFrame))));
 });
 ScrollTrigger.create({
@@ -503,6 +510,16 @@ ScrollTrigger.create({trigger:'#pillars',start:'top 80%',end:'bottom top',
   onEnter:()=>pv.play().catch(()=>{}),onEnterBack:()=>pv.play().catch(()=>{}),
   onLeave:()=>pv.pause(),onLeaveBack:()=>pv.pause()});
 pv.addEventListener('error',()=>{ pv.style.display='none'; });
+
+/* pillar thumbnail loops — load + play only while the section is on screen */
+const pvThumbs=[...document.querySelectorAll('.pThumbs video.pv')];
+ScrollTrigger.create({trigger:'#pillars',start:'top 90%',end:'bottom top',
+  onToggle:s=>{
+    pvThumbs.forEach(v=>{
+      if(s.isActive){ if(v.preload!=='auto'){v.preload='auto';v.load();} v.play().catch(()=>{}); }
+      else v.pause();
+    });
+  }});
 
 /* ---------- work ---------- */
 const wv=document.getElementById('workVideo');
